@@ -10,8 +10,7 @@ if not os.path.exists('secrets.yaml'):
 
 def read_secrets(file_path):
     with open(file_path, 'r') as file:
-        secrets = yaml.safe_load(file)
-    return secrets
+        return yaml.safe_load(file)
 
 
 secrets = read_secrets('secrets.yaml')
