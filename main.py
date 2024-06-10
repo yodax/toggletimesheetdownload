@@ -64,6 +64,9 @@ def run(pw: Playwright) -> None:
     context.close()
     browser.close()
 
+    # Open an explorer window to the directory of the file and try to highlight the file
+    os.startfile(directory)
+
 
 with sync_playwright() as playwright:
     run(playwright)
